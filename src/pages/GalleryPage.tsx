@@ -5,16 +5,16 @@ import { PageTransition } from '../components/PageTransition';
 import { usePageTitle } from '../hooks/usePageTitle';
 
 const galleryImages = [
-{ src: '/lepetitchalet-steak-view.webp', alt: 'Plated steak with a view over Kigali' },
-{ src: '/lepetitchalet-environment.jpeg', alt: 'Le Petit Chalet interior' },
-{ src: '/lepetitchalet-people.jpeg', alt: 'Guests on the patio' },
-{ src: '/lepetitchalet-chef.jpg', alt: 'Our Executive Chef' },
-{ src: '/lepetitchalet-cocktail.jpeg', alt: 'Crafted cocktail' },
-{ src: '/lepetitchalet-dining-room.jpeg', alt: 'The dining room' },
-{ src: '/lepetitchalet-ceviche.jpeg', alt: "Chef's plate" },
-{ src: '/lepetitchalet-pizza.jpg', alt: 'Wood-fired pizza' },
-{ src: '/lepetitchalet-terrace-day.jpg', alt: 'Terrace with a view over Kigali' },
-{ src: '/lepetitchalet-pastry.jpeg', alt: 'Dessert plate' }];
+{ src: '/lepetitchalet-chef-flambe.jpeg', alt: 'Chef flambéing a dish' },
+{ src: '/lepetitchalet-steak-plated.jpeg', alt: 'Plated steak' },
+{ src: '/lepetitchalet-onion-soup.jpeg', alt: 'Classic French onion soup' },
+{ src: '/lepetitchalet-caesar-salad.jpeg', alt: 'Caesar salad' },
+{ src: '/lepetitchalet-sticky-date.jpeg', alt: 'Sticky date pudding' },
+{ src: '/lepetitchalet-medallions.jpeg', alt: "Chef's plate" },
+{ src: '/lepetitchalet-dinner-table.jpeg', alt: 'Guests dining at Le Petit Chalet' },
+{ src: '/lepetitchalet-salmon-table.jpeg', alt: 'Salmon dish at the table' },
+{ src: '/lepetitchalet-wings.jpeg', alt: 'Chili glazed chicken wings' },
+{ src: '/lepetitchalet-chef.jpg', alt: 'Our Executive Chef' }];
 
 
 export function GalleryPage() {

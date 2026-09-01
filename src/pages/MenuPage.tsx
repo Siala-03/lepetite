@@ -226,7 +226,7 @@ export function MenuPage() {
         <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center">
           <div className="absolute inset-0 z-0">
             <img
-              src="/lepetitchalet-mixed-grill.jpg"
+              src="/lepetitchalet-wings.jpeg"
               alt="Menu hero"
               className="w-full h-full object-cover" />
 
@@ -278,24 +278,24 @@ export function MenuPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {[
             {
-              name: 'Dry Aged Kenyan Ribeye',
-              img: '/lepetitchalet-steak-view.webp'
+              name: 'Classic French Onion Soup',
+              img: '/lepetitchalet-onion-soup.jpeg'
             },
             {
-              name: 'Grilled Salmon',
-              img: '/lepetitchalet-salmon.webp'
+              name: 'Steak Frites',
+              img: '/lepetitchalet-steak-plated.jpeg'
+            },
+            {
+              name: 'Caesar Salad',
+              img: '/lepetitchalet-caesar-salad.jpeg'
             },
             {
               name: 'Sticky Date Pudding',
-              img: '/lepetitchalet-sticky-toffee.jpg'
-            },
-            {
-              name: 'Crafted Cocktails',
-              img: '/lepetitchalet-cocktail.jpeg'
+              img: '/lepetitchalet-sticky-date.jpeg'
             },
             {
               name: 'From the Kitchen',
-              img: '/lepetitchalet-mixed-grill.jpg'
+              img: '/lepetitchalet-chef-flambe.jpeg'
             }].
             map((item, i) =>
             <motion.div

@@ -4,10 +4,10 @@ import { PageTransition } from '../components/PageTransition';
 import { usePageTitle } from '../hooks/usePageTitle';
 
 const slides = [
-{ word: 'welcome', img: '/lepetitchalet-steak-view.webp', alt: 'Le Petit Chalet plated steak with a view over Kigali' },
+{ word: 'welcome', img: '/lepetitchalet-chef-flambe.jpeg', alt: 'Le Petit Chalet chef flambéing a dish' },
 { word: 'experience', img: '/lepetitchalet-terrace-gold.webp', alt: 'Le Petit Chalet terrace at golden hour' },
-{ word: 'taste', img: '/lepetitchalet-pizza.jpg', alt: 'Le Petit Chalet wood-fired pizza' },
-{ word: 'savour', img: '/lepetitchalet-cocktail.jpeg', alt: 'Le Petit Chalet crafted cocktail' }];
+{ word: 'taste', img: '/lepetitchalet-steak-plated.jpeg', alt: 'Le Petit Chalet plated steak' },
+{ word: 'savour', img: '/lepetitchalet-dinner-table.jpeg', alt: 'Guests dining at Le Petit Chalet' }];
 
 
 export function HomePage() {
@@ -36,7 +36,7 @@ export function HomePage() {
             <img
               src={slides[index].img}
               alt={slides[index].alt}
-              className="w-full h-full object-cover object-center" />
+              className="w-full h-full object-contain object-center" />
 
           </motion.div>
         </AnimatePresence>
