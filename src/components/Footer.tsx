@@ -17,9 +17,10 @@ export function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link to="/" className="inline-block group">
-              <span className="font-display text-2xl tracking-wide text-chalet-warm-white">
-                Le Petit Chalet
-              </span>
+              <img
+                src="/lepetitchalet-logo.jpg"
+                alt="Le Petit Chalet"
+                className="h-16 w-16 rounded-full object-cover border border-chalet-charcoal" />
             </Link>
             <p className="text-chalet-cream/70 text-sm leading-relaxed">
               A mountain-inspired dining and wine retreat in the heart of

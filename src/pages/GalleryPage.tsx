@@ -5,16 +5,16 @@ import { PageTransition } from '../components/PageTransition';
 import { usePageTitle } from '../hooks/usePageTitle';
 
 const galleryImages = [
-{ src: '/DSC_8450.webp', alt: 'Signature plated dish' },
-{ src: '/done_1.webp', alt: 'Le Petit Chalet interior' },
-{ src: '/DSC_8494.webp', alt: 'Bar and lounge ambiance' },
-{ src: '/kiqao-coffee.webp', alt: 'Latte art at Le Petit Chalet' },
-{ src: '/done_7.webp', alt: 'Wine from our cellar' },
-{ src: '/DSC_8478.webp', alt: 'Le Petit Chalet entrance' },
-{ src: '/DSC_8433.webp', alt: 'Le Petit Chalet signature dish' },
-{ src: '/done_5.webp', alt: 'Le Petit Chalet table setting' },
-{ src: '/done_4.webp', alt: 'Le Petit Chalet venue' },
-{ src: '/done_3.webp', alt: 'Le Petit Chalet at dusk' }];
+{ src: '/lepetitchalet-steak-view.webp', alt: 'Plated steak with a view over Kigali' },
+{ src: '/lepetitchalet-environment.jpeg', alt: 'Le Petit Chalet interior' },
+{ src: '/lepetitchalet-people.jpeg', alt: 'Guests on the patio' },
+{ src: '/lepetitchalet-chef.jpg', alt: 'Our Executive Chef' },
+{ src: '/lepetitchalet-cocktail.jpeg', alt: 'Crafted cocktail' },
+{ src: '/lepetitchalet-dining-room.jpeg', alt: 'The dining room' },
+{ src: '/lepetitchalet-ceviche.jpeg', alt: "Chef's plate" },
+{ src: '/lepetitchalet-pizza.jpg', alt: 'Wood-fired pizza' },
+{ src: '/lepetitchalet-terrace-day.jpg', alt: 'Terrace with a view over Kigali' },
+{ src: '/lepetitchalet-pastry.jpeg', alt: 'Dessert plate' }];
 
 
 export function GalleryPage() {
@@ -26,7 +26,7 @@ export function GalleryPage() {
         <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center">
           <div className="absolute inset-0 z-0">
             <img
-              src="/done_4.webp"
+              src="/lepetitchalet-terrace-day.jpg"
               alt="Le Petit Chalet"
               className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-chalet-black/70 backdrop-blur-sm"></div>

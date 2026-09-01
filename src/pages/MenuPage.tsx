@@ -226,7 +226,7 @@ export function MenuPage() {
         <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center">
           <div className="absolute inset-0 z-0">
             <img
-              src="/DSC_8450.webp"
+              src="/lepetitchalet-mixed-grill.jpg"
               alt="Menu hero"
               className="w-full h-full object-cover" />
 
@@ -278,24 +278,24 @@ export function MenuPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {[
             {
-              name: 'French Onion Soup',
-              img: '/DSC_8433.webp'
-            },
-            {
-              name: 'Smoked Salmon Baguette',
-              img: '/kiqao-club-sandwich.webp'
-            },
-            {
-              name: 'Chicken Rigatoni alla Vodka',
-              img: '/kiqao-chicken-pasta.webp'
-            },
-            {
               name: 'Dry Aged Kenyan Ribeye',
-              img: '/DSC_8450.webp'
+              img: '/lepetitchalet-steak-view.webp'
             },
             {
-              name: 'The Wine List',
-              img: '/done_7.webp'
+              name: 'Grilled Salmon',
+              img: '/lepetitchalet-salmon.webp'
+            },
+            {
+              name: 'Sticky Date Pudding',
+              img: '/lepetitchalet-sticky-toffee.jpg'
+            },
+            {
+              name: 'Crafted Cocktails',
+              img: '/lepetitchalet-cocktail.jpeg'
+            },
+            {
+              name: 'From the Kitchen',
+              img: '/lepetitchalet-mixed-grill.jpg'
             }].
             map((item, i) =>
             <motion.div
@@ -413,6 +413,14 @@ export function MenuPage() {
 
           {/* Notice */}
           <div className="mt-24 text-center border-t border-chalet-charcoal pt-8">
+            <a
+              href="/lepetitchalet-menu.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-chalet-amber hover:text-chalet-honey transition-colors text-sm tracking-wide uppercase mb-4">
+
+              Download Full Menu (PDF)
+            </a>
             <p className="text-chalet-cream/40 text-xs max-w-2xl mx-auto">
               Please inform your server of any allergies or dietary
               requirements.

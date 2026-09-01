@@ -38,9 +38,10 @@ export function Navbar() {
       {/* Fixed top bar: logo + socials */}
       <div className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 py-5">
         <Link to="/" className="flex items-center">
-          <span className="font-display text-lg sm:text-xl tracking-wide text-chalet-warm-white">
-            Le Petit Chalet
-          </span>
+          <img
+            src="/lepetitchalet-logo.jpg"
+            alt="Le Petit Chalet"
+            className="h-11 w-11 rounded-full object-cover border border-chalet-charcoal" />
         </Link>
         <div className="hidden sm:flex items-center space-x-4">
           <a

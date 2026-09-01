@@ -21,7 +21,7 @@ export function OurStoryPage() {
         <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center">
           <div className="absolute inset-0 z-0">
             <img
-              src="/DSC_8494.webp"
+              src="/lepetitchalet-dining-room.jpeg"
               alt="Le Petit Chalet ambiance"
               className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-chalet-black/70 backdrop-blur-sm"></div>
@@ -57,8 +57,8 @@ export function OurStoryPage() {
 
               <div className="aspect-[4/5] overflow-hidden rounded-sm">
                 <img
-                  src="/done_1.webp"
-                  alt="Le Petit Chalet interior"
+                  src="/lepetitchalet-chef.jpg"
+                  alt="Our Executive Chef at Le Petit Chalet"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" />
               </div>
               <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-chalet-charcoal border border-chalet-amber/30 hidden md:flex items-center justify-center p-6 rounded-sm">
@@ -92,7 +92,8 @@ export function OurStoryPage() {
                   Our kitchen draws on European comfort-food traditions —
                   from French onion soup to dry-aged steaks — paired with a
                   cellar of carefully chosen reds, whites, and champagnes, and
-                  a bar program of house-crafted cocktails.
+                  a bar program of house-crafted cocktails, all led by our
+                  executive chef.
                 </p>
               </motion.div>
 
@@ -123,8 +124,8 @@ export function OurStoryPage() {
         {/* Cinematic break */}
         <section className="relative h-[60vh] min-h-[420px] overflow-hidden flex items-center justify-center">
           <img
-            src="/done_3.webp"
-            alt="Le Petit Chalet at dusk"
+            src="/lepetitchalet-terrace-gold.webp"
+            alt="Le Petit Chalet terrace at golden hour"
             className="absolute inset-0 w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-chalet-black/50"></div>
           <motion.p

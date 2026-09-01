@@ -4,11 +4,11 @@ import { PageTransition } from '../components/PageTransition';
 import { usePageTitle } from '../hooks/usePageTitle';
 
 const slides = [
-{ word: 'welcome', img: '/done_4.webp', alt: 'Le Petit Chalet venue' },
-{ word: 'discover', img: '/done_1.webp', alt: 'Le Petit Chalet interior' },
-{ word: 'experience', img: '/DSC_8450.webp', alt: 'Le Petit Chalet signature dish' },
-{ word: 'taste', img: '/DSC_8433.webp', alt: 'Le Petit Chalet signature dish' },
-{ word: 'savour', img: '/done_7.webp', alt: 'Le Petit Chalet wine collection' }];
+{ word: 'welcome', img: '/lepetitchalet-steak-view.webp', alt: 'Le Petit Chalet plated steak with a view over Kigali' },
+{ word: 'discover', img: '/lepetitchalet-environment.jpeg', alt: 'Le Petit Chalet interior' },
+{ word: 'experience', img: '/lepetitchalet-terrace-gold.webp', alt: 'Le Petit Chalet terrace at golden hour' },
+{ word: 'taste', img: '/lepetitchalet-pizza.jpg', alt: 'Le Petit Chalet wood-fired pizza' },
+{ word: 'savour', img: '/lepetitchalet-cocktail.jpeg', alt: 'Le Petit Chalet crafted cocktail' }];
 
 
 export function HomePage() {

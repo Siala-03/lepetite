@@ -13,8 +13,8 @@ export function ReviewsPage() {
         <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center">
           <div className="absolute inset-0 z-0">
             <img
-              src="/done_5.webp"
-              alt="Le Petit Chalet table setting"
+              src="/lepetitchalet-people.jpeg"
+              alt="Guests on the patio at Le Petit Chalet"
               className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-chalet-black/70 backdrop-blur-sm"></div>
           </div>
