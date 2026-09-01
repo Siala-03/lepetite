@@ -5,7 +5,6 @@ import { usePageTitle } from '../hooks/usePageTitle';
 
 const slides = [
 { word: 'welcome', img: '/lepetitchalet-steak-view.webp', alt: 'Le Petit Chalet plated steak with a view over Kigali' },
-{ word: 'discover', img: '/lepetitchalet-environment.jpeg', alt: 'Le Petit Chalet interior' },
 { word: 'experience', img: '/lepetitchalet-terrace-gold.webp', alt: 'Le Petit Chalet terrace at golden hour' },
 { word: 'taste', img: '/lepetitchalet-pizza.jpg', alt: 'Le Petit Chalet wood-fired pizza' },
 { word: 'savour', img: '/lepetitchalet-cocktail.jpeg', alt: 'Le Petit Chalet crafted cocktail' }];
