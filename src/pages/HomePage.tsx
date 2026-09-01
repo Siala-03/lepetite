@@ -36,7 +36,7 @@ export function HomePage() {
             <img
               src={slides[index].img}
               alt={slides[index].alt}
-              className="w-full h-full object-contain object-center" />
+              className="w-full h-full object-cover object-center" />
 
           </motion.div>
         </AnimatePresence>
