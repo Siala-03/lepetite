@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kiqao.rw/sitemap.xml
+Sitemap: https://lepetitchalet-rw.com/sitemap.xml

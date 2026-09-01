@@ -10,24 +10,24 @@ import {
 'lucide-react';
 import { PageTransition } from '../components/PageTransition';
 import { WhatsAppIcon } from '../components/icons/WhatsAppIcon';
-import { PHONE_DISPLAY, WHATSAPP_NUMBER, EMAIL } from '../config/contact';
+import { PHONE_DISPLAY, WHATSAPP_NUMBER, EMAIL, ADDRESS_LINE, ADDRESS_CITY } from '../config/contact';
 import { usePageTitle } from '../hooks/usePageTitle';
 const faqs = [
 {
   q: 'Do you accommodate dietary restrictions?',
-  a: 'Absolutely! Our kitchen can accommodate most dietary requirements including gluten-free, vegan, and specific allergies. Please inform us when making your reservation so our chef can prepare accordingly.'
+  a: 'Yes — our kitchen can accommodate most dietary requirements, including gluten-free and vegan requests. Please let us know when you book so our chef can prepare accordingly.'
 },
 {
-  q: 'Is parking available?',
-  a: 'Yes, we offer complimentary valet parking for all our dining guests. Self-parking is also available in the adjacent secure lot.'
+  q: 'Do I need a reservation?',
+  a: "Walk-ins are welcome, but we recommend booking ahead via WhatsApp for larger groups, weekend brunch, or peak evening hours."
 },
 {
   q: 'Can I host a private event?',
-  a: 'Yes! We have private dining rooms that can accommodate up to 40 guests, and the entire venue can be booked for larger events. Please use the contact form to inquire about private events.'
+  a: 'Yes — please reach out via the contact form or WhatsApp to discuss private dining for your celebration or gathering.'
 }];
 
 export function ContactPage() {
-  usePageTitle('Contact | Kiqao Lounge');
+  usePageTitle('Contact | Le Petit Chalet');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -54,16 +54,16 @@ export function ContactPage() {
   };
   return (
     <PageTransition>
-      <main className="flex-grow bg-kiqao-black text-kiqao-cream min-h-screen">
+      <main className="flex-grow bg-chalet-black text-chalet-cream min-h-screen">
         {/* Hero Banner */}
         <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center">
           <div className="absolute inset-0 z-0">
             <img
               src="/DSC_8478.webp"
-              alt="Kiqao Lounge entrance"
+              alt="Le Petit Chalet entrance"
               className="w-full h-full object-cover" />
             
-            <div className="absolute inset-0 bg-kiqao-black/80 backdrop-blur-sm"></div>
+            <div className="absolute inset-0 bg-chalet-black/80 backdrop-blur-sm"></div>
           </div>
           <div className="relative z-10 text-center px-4 mt-16">
             <motion.h1
@@ -75,7 +75,7 @@ export function ContactPage() {
                 opacity: 1,
                 y: 0
               }}
-              className="font-display text-5xl md:text-6xl text-kiqao-warm-white mb-4">
+              className="font-display text-5xl md:text-6xl text-chalet-warm-white mb-4">
               
               Get in Touch
             </motion.h1>
@@ -91,7 +91,7 @@ export function ContactPage() {
               transition={{
                 delay: 0.2
               }}
-              className="text-kiqao-gold tracking-widest uppercase text-sm">
+              className="text-chalet-amber tracking-widest uppercase text-sm">
               
               We'd love to hear from you
             </motion.p>
@@ -110,25 +110,25 @@ export function ContactPage() {
                 opacity: 1,
                 x: 0
               }}
-              className="bg-kiqao-rich-black border border-kiqao-charcoal p-8 md:p-10 rounded-sm">
+              className="bg-chalet-rich-black border border-chalet-charcoal p-8 md:p-10 rounded-sm">
               
-              <h2 className="font-display text-3xl md:text-4xl text-kiqao-warm-white mb-8">
+              <h2 className="font-display text-3xl md:text-4xl text-chalet-warm-white mb-8">
                 Send a Message
               </h2>
 
               {isSuccess ?
-              <div className="bg-kiqao-charcoal/50 border border-kiqao-gold/30 p-6 rounded-sm text-center">
-                  <p className="text-kiqao-gold font-medium mb-2">
+              <div className="bg-chalet-charcoal/50 border border-chalet-amber/30 p-6 rounded-sm text-center">
+                  <p className="text-chalet-amber font-medium mb-2">
                     Message Sent Successfully!
                   </p>
-                  <p className="text-kiqao-cream/70 text-sm">
+                  <p className="text-chalet-cream/70 text-sm">
                     We will get back to you as soon as possible.
                   </p>
                 </div> :
 
               <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label className="block text-sm text-kiqao-cream/70 mb-2 uppercase tracking-wider">
+                    <label className="block text-sm text-chalet-cream/70 mb-2 uppercase tracking-wider">
                       Name *
                     </label>
                     <input
@@ -141,11 +141,11 @@ export function ContactPage() {
                       name: e.target.value
                     })
                     }
-                    className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm" />
+                    className="w-full bg-chalet-black border border-chalet-charcoal text-chalet-cream px-4 py-3 focus:outline-none focus:border-chalet-amber transition-colors rounded-sm" />
                   
                   </div>
                   <div>
-                    <label className="block text-sm text-kiqao-cream/70 mb-2 uppercase tracking-wider">
+                    <label className="block text-sm text-chalet-cream/70 mb-2 uppercase tracking-wider">
                       Email *
                     </label>
                     <input
@@ -158,11 +158,11 @@ export function ContactPage() {
                       email: e.target.value
                     })
                     }
-                    className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm" />
+                    className="w-full bg-chalet-black border border-chalet-charcoal text-chalet-cream px-4 py-3 focus:outline-none focus:border-chalet-amber transition-colors rounded-sm" />
                   
                   </div>
                   <div>
-                    <label className="block text-sm text-kiqao-cream/70 mb-2 uppercase tracking-wider">
+                    <label className="block text-sm text-chalet-cream/70 mb-2 uppercase tracking-wider">
                       Subject
                     </label>
                     <select
@@ -173,7 +173,7 @@ export function ContactPage() {
                       subject: e.target.value
                     })
                     }
-                    className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm appearance-none">
+                    className="w-full bg-chalet-black border border-chalet-charcoal text-chalet-cream px-4 py-3 focus:outline-none focus:border-chalet-amber transition-colors rounded-sm appearance-none">
                     
                       <option>General Inquiry</option>
                       <option>Reservation Issue</option>
@@ -183,7 +183,7 @@ export function ContactPage() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm text-kiqao-cream/70 mb-2 uppercase tracking-wider">
+                    <label className="block text-sm text-chalet-cream/70 mb-2 uppercase tracking-wider">
                       Message *
                     </label>
                     <textarea
@@ -196,13 +196,13 @@ export function ContactPage() {
                       message: e.target.value
                     })
                     }
-                    className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm resize-none">
+                    className="w-full bg-chalet-black border border-chalet-charcoal text-chalet-cream px-4 py-3 focus:outline-none focus:border-chalet-amber transition-colors rounded-sm resize-none">
                   </textarea>
                   </div>
                   <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 bg-kiqao-gold text-kiqao-black font-medium tracking-wider hover:bg-kiqao-champagne transition-colors rounded-full uppercase disabled:opacity-70 flex justify-center">
+                  className="w-full py-4 bg-chalet-amber text-chalet-black font-medium tracking-wider hover:bg-chalet-honey transition-colors rounded-full uppercase disabled:opacity-70 flex justify-center">
                   
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
@@ -223,51 +223,51 @@ export function ContactPage() {
               className="space-y-10">
               
               <div>
-                <h2 className="font-display text-3xl md:text-4xl text-kiqao-warm-white mb-8">
+                <h2 className="font-display text-3xl md:text-4xl text-chalet-warm-white mb-8">
                   Contact Information
                 </h2>
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <MapPinIcon className="w-6 h-6 text-kiqao-gold mr-4 flex-shrink-0 mt-1" />
+                    <MapPinIcon className="w-6 h-6 text-chalet-amber mr-4 flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="text-kiqao-warm-white font-medium mb-1">
+                      <h4 className="text-chalet-warm-white font-medium mb-1">
                         Location
                       </h4>
-                      <p className="text-kiqao-cream/70">
-                        Nyarutarama KG 274 St
+                      <p className="text-chalet-cream/70">
+                        {ADDRESS_LINE}
                         <br />
-                        Kigali, Rwanda
+                        {ADDRESS_CITY}
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <PhoneIcon className="w-6 h-6 text-kiqao-gold mr-4 flex-shrink-0 mt-1" />
+                    <PhoneIcon className="w-6 h-6 text-chalet-amber mr-4 flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="text-kiqao-warm-white font-medium mb-1">
+                      <h4 className="text-chalet-warm-white font-medium mb-1">
                         Phone
                       </h4>
-                      <p className="text-kiqao-cream/70">{PHONE_DISPLAY}</p>
+                      <p className="text-chalet-cream/70">{PHONE_DISPLAY}</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <MailIcon className="w-6 h-6 text-kiqao-gold mr-4 flex-shrink-0 mt-1" />
+                    <MailIcon className="w-6 h-6 text-chalet-amber mr-4 flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="text-kiqao-warm-white font-medium mb-1">
+                      <h4 className="text-chalet-warm-white font-medium mb-1">
                         Email
                       </h4>
-                      <p className="text-kiqao-cream/70">
+                      <p className="text-chalet-cream/70">
                         {EMAIL}
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <ClockIcon className="w-6 h-6 text-kiqao-gold mr-4 flex-shrink-0 mt-1" />
+                    <ClockIcon className="w-6 h-6 text-chalet-amber mr-4 flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="text-kiqao-warm-white font-medium mb-1">
+                      <h4 className="text-chalet-warm-white font-medium mb-1">
                         Hours
                       </h4>
-                      <p className="text-kiqao-cream/70">
-                        Mon-Sun: 11:00 AM - Late
+                      <p className="text-chalet-cream/70">
+                        Daily: 11:30 AM - 10:00 PM
                       </p>
                     </div>
                   </div>
@@ -276,19 +276,19 @@ export function ContactPage() {
 
               {/* Map */}
               <a
-                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.450212234567!2d30.0575!3d-1.9536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwNTcnMTUuMiJTIDMwwrAzNCcxNS4yRw!5e0!3m2!1sen!2srw!4v1234567890"
+                href="https://www.google.com/maps/search/?api=1&query=Le+Petit+Chalet+KG+5+Kigali+Rwanda"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-kiqao-charcoal h-64 rounded-sm border border-kiqao-gold/20 overflow-hidden group hover:border-kiqao-gold/50 transition-colors">
+                className="block bg-chalet-charcoal h-64 rounded-sm border border-chalet-amber/20 overflow-hidden group hover:border-chalet-amber/50 transition-colors">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.450212234567!2d30.0575!3d-1.9536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwNTcnMTUuMiJTIDMwwrAzNCcxNS4yRw!5e0!3m2!1sen!2srw!4v1234567890"
+                  src="https://www.google.com/maps?q=Le+Petit+Chalet+KG+5+Kigali+Rwanda&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Kiqao Lounge Location"
+                  title="Le Petit Chalet Location"
                   className="w-full h-full"
                 />
               </a>
@@ -308,17 +308,17 @@ export function ContactPage() {
           {/* FAQ Section */}
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="font-display text-3xl md:text-4xl text-kiqao-warm-white mb-4">
+              <h2 className="font-display text-3xl md:text-4xl text-chalet-warm-white mb-4">
                 Frequently Asked Questions
               </h2>
-              <div className="w-16 h-0.5 bg-kiqao-gold mx-auto"></div>
+              <div className="w-16 h-0.5 bg-chalet-amber mx-auto"></div>
             </div>
 
             <div className="space-y-4">
               {faqs.map((faq, idx) =>
               <div
                 key={idx}
-                className="bg-kiqao-rich-black border border-kiqao-charcoal rounded-sm overflow-hidden">
+                className="bg-chalet-rich-black border border-chalet-charcoal rounded-sm overflow-hidden">
                 
                   <button
                   onClick={() =>
@@ -326,13 +326,13 @@ export function ContactPage() {
                   }
                   className="w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none">
                   
-                    <span className="font-display text-lg text-kiqao-warm-white">
+                    <span className="font-display text-lg text-chalet-warm-white">
                       {faq.q}
                     </span>
                     {openFaqIndex === idx ?
-                  <ChevronUpIcon className="w-5 h-5 text-kiqao-gold flex-shrink-0" /> :
+                  <ChevronUpIcon className="w-5 h-5 text-chalet-amber flex-shrink-0" /> :
 
-                  <ChevronDownIcon className="w-5 h-5 text-kiqao-gold flex-shrink-0" />
+                  <ChevronDownIcon className="w-5 h-5 text-chalet-amber flex-shrink-0" />
                   }
                   </button>
                   <AnimatePresence>
@@ -354,7 +354,7 @@ export function ContactPage() {
                       duration: 0.3
                     }}>
                     
-                        <div className="px-6 pb-6 text-kiqao-cream/70 leading-relaxed border-t border-kiqao-charcoal pt-4">
+                        <div className="px-6 pb-6 text-chalet-cream/70 leading-relaxed border-t border-chalet-charcoal pt-4">
                           {faq.a}
                         </div>
                       </motion.div>

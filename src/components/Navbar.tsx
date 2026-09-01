@@ -9,22 +9,22 @@ import {
   InstagramIcon,
   FacebookIcon } from
 'lucide-react';
-import { RESERVATION_URL, ORDER_URL } from '../config/servv';
+import { WHATSAPP_NUMBER } from '../config/contact';
 
-const primaryLinks = [
+const RESERVATION_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
+
+type NavLink = { name: string; path?: string; href?: string };
+
+const primaryLinks: NavLink[] = [
 { name: 'Home', path: '/' },
 { name: 'Menu', path: '/menu' },
 { name: 'Reviews', path: '/reviews' },
-{ name: 'Events', path: '/events' },
-{ name: 'Live', path: '/live' },
 { name: 'Contacts', path: '/contact' }];
 
 
-const secondaryLinks = [
+const secondaryLinks: NavLink[] = [
 { name: 'Our Story', path: '/our-story' },
-{ name: 'Gallery', path: '/gallery' },
-{ name: 'Careers', path: '/careers' },
-{ name: 'Order Online', href: ORDER_URL }];
+{ name: 'Gallery', path: '/gallery' }];
 
 
 export function Navbar() {
@@ -38,33 +38,31 @@ export function Navbar() {
       {/* Fixed top bar: logo + socials */}
       <div className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 py-5">
         <Link to="/" className="flex items-center">
-          <img
-            src="/kiqao-logo.webp"
-            alt="Kiqao Lounge"
-            className="h-10 w-auto rounded-sm" />
-
+          <span className="font-display text-lg sm:text-xl tracking-wide text-chalet-warm-white">
+            Le Petit Chalet
+          </span>
         </Link>
         <div className="hidden sm:flex items-center space-x-4">
           <a
-            href="https://www.instagram.com/kiqaolounge.rw/"
+            href="https://www.instagram.com/lepetitchalet_rwanda/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-kiqao-cream/80 hover:text-kiqao-warm-white transition-colors">
+            className="text-chalet-cream/80 hover:text-chalet-warm-white transition-colors">
 
             <InstagramIcon className="w-5 h-5" />
           </a>
           <a
-            href="https://www.facebook.com/"
+            href="https://www.facebook.com/LePetitChaletRwanda"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-kiqao-cream/80 hover:text-kiqao-warm-white transition-colors">
+            className="text-chalet-cream/80 hover:text-chalet-warm-white transition-colors">
 
             <FacebookIcon className="w-5 h-5" />
           </a>
         </div>
         {/* Mobile toggle */}
         <button
-          className="sm:hidden text-kiqao-warm-white"
+          className="sm:hidden text-chalet-warm-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu">
 
@@ -74,12 +72,12 @@ export function Navbar() {
 
       {/* Floating bottom capsule nav (desktop) */}
       <div className="hidden sm:flex fixed bottom-4 left-0 right-0 z-40 justify-center px-4">
-        <div className="flex items-center gap-1 bg-kiqao-rich-black/90 backdrop-blur-md border border-kiqao-charcoal rounded-full px-2 py-2 shadow-lg relative">
+        <div className="flex items-center gap-1 bg-chalet-rich-black/90 backdrop-blur-md border border-chalet-charcoal rounded-full px-2 py-2 shadow-lg relative">
           {primaryLinks.map((link) =>
           <Link
             key={link.name}
-            to={link.path}
-            className={`px-4 py-2 text-sm tracking-wide rounded-full transition-colors ${location.pathname === link.path ? 'bg-kiqao-charcoal text-kiqao-warm-white' : 'text-kiqao-cream/80 hover:text-kiqao-warm-white'}`}>
+            to={link.path!}
+            className={`px-4 py-2 text-sm tracking-wide rounded-full transition-colors ${location.pathname === link.path ? 'bg-chalet-charcoal text-chalet-warm-white' : 'text-chalet-cream/80 hover:text-chalet-warm-white'}`}>
 
               {link.name}
             </Link>
@@ -93,7 +91,7 @@ export function Navbar() {
                 setIsMoreOpen(false);
               }}
               aria-label="Opening hours"
-              className="p-2.5 rounded-full text-kiqao-cream/80 hover:text-kiqao-warm-white transition-colors">
+              className="p-2.5 rounded-full text-chalet-cream/80 hover:text-chalet-warm-white transition-colors">
 
               <ClockIcon className="w-4 h-4" />
             </button>
@@ -103,11 +101,11 @@ export function Navbar() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
-                className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 w-56 bg-kiqao-rich-black border border-kiqao-charcoal rounded-lg p-4 text-left">
+                className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 w-56 bg-chalet-rich-black border border-chalet-charcoal rounded-lg p-4 text-left">
 
-                  <h3 className="font-display text-sm text-kiqao-warm-white mb-2">Opening Hours</h3>
-                  <p className="text-xs text-kiqao-cream/70">Mon - Sun</p>
-                  <p className="text-xs text-kiqao-cream/70">11:00 AM - Late</p>
+                  <h3 className="font-display text-sm text-chalet-warm-white mb-2">Opening Hours</h3>
+                  <p className="text-xs text-chalet-cream/70">Daily</p>
+                  <p className="text-xs text-chalet-cream/70">11:30 AM - 10:00 PM</p>
                 </motion.div>
               }
             </AnimatePresence>
@@ -121,7 +119,7 @@ export function Navbar() {
                 setIsHoursOpen(false);
               }}
               aria-label="More links"
-              className="p-2.5 rounded-full text-kiqao-cream/80 hover:text-kiqao-warm-white transition-colors">
+              className="p-2.5 rounded-full text-chalet-cream/80 hover:text-chalet-warm-white transition-colors">
 
               {isMoreOpen ? <ChevronUpIcon className="w-4 h-4" /> : <MenuIcon className="w-4 h-4" />}
             </button>
@@ -131,7 +129,7 @@ export function Navbar() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
-                className="absolute bottom-full mb-3 right-0 w-48 bg-kiqao-rich-black border border-kiqao-charcoal rounded-lg p-2 text-left">
+                className="absolute bottom-full mb-3 right-0 w-48 bg-chalet-rich-black border border-chalet-charcoal rounded-lg p-2 text-left">
 
                   {secondaryLinks.map((link) =>
                 link.href ?
@@ -140,15 +138,15 @@ export function Navbar() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-4 py-2.5 text-sm text-kiqao-cream/80 hover:text-kiqao-warm-white rounded-md hover:bg-kiqao-charcoal transition-colors">
+                  className="block px-4 py-2.5 text-sm text-chalet-cream/80 hover:text-chalet-warm-white rounded-md hover:bg-chalet-charcoal transition-colors">
 
                         {link.name}
                       </a> :
 
                 <Link
                   key={link.name}
-                  to={link.path}
-                  className="block px-4 py-2.5 text-sm text-kiqao-cream/80 hover:text-kiqao-warm-white rounded-md hover:bg-kiqao-charcoal transition-colors">
+                  to={link.path!}
+                  className="block px-4 py-2.5 text-sm text-chalet-cream/80 hover:text-chalet-warm-white rounded-md hover:bg-chalet-charcoal transition-colors">
 
                         {link.name}
                       </Link>
@@ -163,9 +161,9 @@ export function Navbar() {
             href={RESERVATION_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-1 px-5 py-2 bg-kiqao-warm-white text-kiqao-black text-sm font-medium tracking-wide rounded-full hover:bg-kiqao-cream transition-colors uppercase">
+            className="ml-1 px-5 py-2 bg-chalet-warm-white text-chalet-black text-sm font-medium tracking-wide rounded-full hover:bg-chalet-cream transition-colors uppercase">
 
-            Reservations
+            Book a Table
           </a>
         </div>
       </div>
@@ -177,7 +175,7 @@ export function Navbar() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="sm:hidden fixed inset-0 z-30 bg-kiqao-black/98 backdrop-blur-md flex flex-col items-center justify-center space-y-5 overflow-y-auto py-24">
+          className="sm:hidden fixed inset-0 z-30 bg-chalet-black/98 backdrop-blur-md flex flex-col items-center justify-center space-y-5 overflow-y-auto py-24">
 
             {[...primaryLinks, ...secondaryLinks].map((link) =>
           'href' in link && link.href ?
@@ -186,7 +184,7 @@ export function Navbar() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl tracking-wide text-kiqao-cream/90"
+            className="text-2xl tracking-wide text-chalet-cream/90"
             onClick={() => setIsMobileMenuOpen(false)}>
 
                   {link.name}
@@ -195,7 +193,7 @@ export function Navbar() {
           <Link
             key={link.name}
             to={(link as { path: string }).path}
-            className={`text-2xl tracking-wide ${location.pathname === (link as { path: string }).path ? 'text-kiqao-warm-white' : 'text-kiqao-cream/90'}`}
+            className={`text-2xl tracking-wide ${location.pathname === (link as { path: string }).path ? 'text-chalet-warm-white' : 'text-chalet-cream/90'}`}
             onClick={() => setIsMobileMenuOpen(false)}>
 
                   {link.name}
@@ -206,9 +204,9 @@ export function Navbar() {
             href={RESERVATION_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 px-8 py-3 bg-kiqao-warm-white text-kiqao-black text-sm font-medium tracking-wide rounded-full uppercase">
+            className="mt-6 px-8 py-3 bg-chalet-warm-white text-chalet-black text-sm font-medium tracking-wide rounded-full uppercase">
 
-              Reservations
+              Book a Table
             </a>
           </motion.div>
         }

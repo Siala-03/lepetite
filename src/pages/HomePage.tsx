@@ -4,15 +4,15 @@ import { PageTransition } from '../components/PageTransition';
 import { usePageTitle } from '../hooks/usePageTitle';
 
 const slides = [
-{ word: 'welcome', img: '/done_4.webp', alt: 'Kiqao Lounge venue' },
-{ word: 'discover', img: '/done_1.webp', alt: 'Kiqao Lounge interior' },
-{ word: 'experience', img: '/DSC_8450.webp', alt: 'Kiqao signature dish' },
-{ word: 'taste', img: '/DSC_8433.webp', alt: 'Kiqao signature dish' },
-{ word: 'savour', img: '/done_7.webp', alt: 'Kiqao wine collection' }];
+{ word: 'welcome', img: '/done_4.webp', alt: 'Le Petit Chalet venue' },
+{ word: 'discover', img: '/done_1.webp', alt: 'Le Petit Chalet interior' },
+{ word: 'experience', img: '/DSC_8450.webp', alt: 'Le Petit Chalet signature dish' },
+{ word: 'taste', img: '/DSC_8433.webp', alt: 'Le Petit Chalet signature dish' },
+{ word: 'savour', img: '/done_7.webp', alt: 'Le Petit Chalet wine collection' }];
 
 
 export function HomePage() {
-  usePageTitle('Kiqao Lounge | Fine Dining & Wine in Kigali');
+  usePageTitle('Le Petit Chalet | Dining & Wine in Kigali');
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export function HomePage() {
 
   return (
     <PageTransition>
-      <main className="relative h-screen w-full overflow-hidden bg-kiqao-black">
+      <main className="relative h-screen w-full overflow-hidden bg-chalet-black">
         <AnimatePresence mode="sync">
           <motion.div
             key={index}

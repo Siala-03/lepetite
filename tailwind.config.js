@@ -7,15 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        kiqao: {
-          black: '#050505',
-          'rich-black': '#0d0d0d',
-          charcoal: '#1a1a1a',
-          gold: '#b34215',
-          champagne: '#d97a4a',
-          burgundy: '#6a1010',
-          merlot: '#4a0d0d',
-          cream: '#e8e8e8',
+        chalet: {
+          black: '#0b0f0c',
+          'rich-black': '#11150f',
+          charcoal: '#1c211a',
+          amber: '#b5762c',
+          honey: '#d9a054',
+          forest: '#2d3d2a',
+          pine: '#1f2b1c',
+          cream: '#e9e5d8',
           'warm-white': '#ffffff',
         },
       },

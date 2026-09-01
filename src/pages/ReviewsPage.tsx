@@ -4,39 +4,40 @@ import { StarIcon } from 'lucide-react';
 import { PageTransition } from '../components/PageTransition';
 import { usePageTitle } from '../hooks/usePageTitle';
 
+// Placeholder quotes — replace with real guest reviews before launch.
 const testimonials = [
 {
-  quote: 'An extraordinary dining experience. The wine pairing was impeccable and the ambiance is unmatched.',
+  quote: 'An extraordinary dining experience. The wine list was impeccable and the ambiance is unmatched.',
   name: 'Sarah M.'
 },
 {
-  quote: 'Kiqao Lounge has become our go-to for special occasions. Every visit feels like a celebration.',
+  quote: 'Le Petit Chalet has become our go-to for special occasions. Every visit feels like a celebration.',
   name: 'James K.'
 },
 {
-  quote: "The Chef's Table experience was unforgettable. Truly world-class cuisine in a stunning setting.",
+  quote: 'Weekend brunch here is unbeatable — great food in a beautiful, relaxed setting.',
   name: 'Amara O.'
 }];
 
 export function ReviewsPage() {
-  usePageTitle('Reviews | Kiqao Lounge');
+  usePageTitle('Reviews | Le Petit Chalet');
   return (
     <PageTransition>
-      <main className="flex-grow bg-kiqao-black text-kiqao-cream">
+      <main className="flex-grow bg-chalet-black text-chalet-cream">
         {/* Hero Banner */}
         <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center">
           <div className="absolute inset-0 z-0">
             <img
               src="/done_5.webp"
-              alt="Kiqao Lounge table setting"
+              alt="Le Petit Chalet table setting"
               className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-kiqao-black/70 backdrop-blur-sm"></div>
+            <div className="absolute inset-0 bg-chalet-black/70 backdrop-blur-sm"></div>
           </div>
           <div className="relative z-10 text-center px-4 mt-16">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="font-display text-5xl md:text-6xl text-kiqao-warm-white mb-4">
+              className="font-display text-5xl md:text-6xl text-chalet-warm-white mb-4">
 
               Reviews
             </motion.h1>
@@ -44,7 +45,7 @@ export function ReviewsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-kiqao-gold tracking-widest uppercase text-sm">
+              className="text-chalet-amber tracking-widest uppercase text-sm">
 
               What our guests say
             </motion.p>
@@ -60,17 +61,17 @@ export function ReviewsPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: (i % 3) * 0.2, duration: 0.5 }}
-              className="bg-kiqao-charcoal p-10 rounded-sm relative">
+              className="bg-chalet-charcoal p-10 rounded-sm relative">
 
                 <div className="flex justify-center mb-6 space-x-1">
                   {[...Array(5)].map((_, j) =>
-                <StarIcon key={j} className="w-5 h-5 text-kiqao-gold fill-kiqao-gold" />
+                <StarIcon key={j} className="w-5 h-5 text-chalet-amber fill-chalet-amber" />
                 )}
                 </div>
-                <p className="text-kiqao-cream/90 italic mb-8 leading-relaxed">
+                <p className="text-chalet-cream/90 italic mb-8 leading-relaxed">
                   "{testimonial.quote}"
                 </p>
-                <p className="font-display text-kiqao-gold text-lg">
+                <p className="font-display text-chalet-amber text-lg">
                   — {testimonial.name}
                 </p>
               </motion.div>

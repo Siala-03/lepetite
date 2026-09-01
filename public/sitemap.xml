@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kiqao.rw/</loc>
+    <loc>https://lepetitchalet-rw.com/</loc>
   </url>
   <url>
-    <loc>https://kiqao.rw/menu</loc>
+    <loc>https://lepetitchalet-rw.com/menu</loc>
   </url>
   <url>
-    <loc>https://kiqao.rw/events</loc>
+    <loc>https://lepetitchalet-rw.com/our-story</loc>
   </url>
   <url>
-    <loc>https://kiqao.rw/contact</loc>
+    <loc>https://lepetitchalet-rw.com/gallery</loc>
+  </url>
+  <url>
+    <loc>https://lepetitchalet-rw.com/reviews</loc>
+  </url>
+  <url>
+    <loc>https://lepetitchalet-rw.com/contact</loc>
   </url>
 </urlset>

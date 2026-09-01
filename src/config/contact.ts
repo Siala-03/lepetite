@@ -1,5 +1,7 @@
 // Single source of truth for contact details used across the site.
-export const PHONE_DISPLAY = '+250 795 044 000';
-export const PHONE_E164 = '+250795044000';
-export const WHATSAPP_NUMBER = '250795044000';
-export const EMAIL = 'infokiqaolounge@gmail.com';
+export const PHONE_DISPLAY = '+250 792 577 485';
+export const PHONE_E164 = '+250792577485';
+export const WHATSAPP_NUMBER = '250792577485';
+export const EMAIL = 'info@lepetitchalet-rw.com';
+export const ADDRESS_LINE = 'KG 5';
+export const ADDRESS_CITY = 'Kigali, Rwanda';

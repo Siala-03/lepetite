@@ -11,7 +11,7 @@ export function WhatsAppButton() {
       aria-label="Chat with us on WhatsApp">
 
       <WhatsAppIcon className="w-7 h-7" />
-      <span className="absolute right-full mr-4 px-3 py-1.5 bg-kiqao-rich-black text-kiqao-cream text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none border border-kiqao-charcoal">
+      <span className="absolute right-full mr-4 px-3 py-1.5 bg-chalet-rich-black text-chalet-cream text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none border border-chalet-charcoal">
         Chat with us
       </span>
     </a>);
