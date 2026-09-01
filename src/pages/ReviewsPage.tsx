@@ -1,23 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { StarIcon } from 'lucide-react';
+import { StarIcon, InstagramIcon, ArrowRightIcon } from 'lucide-react';
 import { PageTransition } from '../components/PageTransition';
 import { usePageTitle } from '../hooks/usePageTitle';
-
-// Placeholder quotes — replace with real guest reviews before launch.
-const testimonials = [
-{
-  quote: 'An extraordinary dining experience. The wine list was impeccable and the ambiance is unmatched.',
-  name: 'Sarah M.'
-},
-{
-  quote: 'Le Petit Chalet has become our go-to for special occasions. Every visit feels like a celebration.',
-  name: 'James K.'
-},
-{
-  quote: 'Weekend brunch here is unbeatable — great food in a beautiful, relaxed setting.',
-  name: 'Amara O.'
-}];
 
 export function ReviewsPage() {
   usePageTitle('Reviews | Le Petit Chalet');
@@ -52,31 +37,47 @@ export function ReviewsPage() {
           </div>
         </section>
 
-        <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, i) =>
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: (i % 3) * 0.2, duration: 0.5 }}
-              className="bg-chalet-charcoal p-10 rounded-sm relative">
+        <section className="py-24 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-chalet-charcoal border border-chalet-charcoal p-10 md:p-14 rounded-sm">
 
-                <div className="flex justify-center mb-6 space-x-1">
-                  {[...Array(5)].map((_, j) =>
-                <StarIcon key={j} className="w-5 h-5 text-chalet-amber fill-chalet-amber" />
-                )}
-                </div>
-                <p className="text-chalet-cream/90 italic mb-8 leading-relaxed">
-                  "{testimonial.quote}"
-                </p>
-                <p className="font-display text-chalet-amber text-lg">
-                  — {testimonial.name}
-                </p>
-              </motion.div>
-            )}
-          </div>
+            <div className="flex justify-center mb-6 space-x-1">
+              {[...Array(5)].map((_, j) =>
+              <StarIcon key={j} className="w-6 h-6 text-chalet-amber fill-chalet-amber" />
+              )}
+            </div>
+            <h2 className="font-display text-2xl md:text-3xl text-chalet-warm-white mb-4">
+              We're building our guest reviews
+            </h2>
+            <p className="text-chalet-cream/70 leading-relaxed mb-10 max-w-xl mx-auto">
+              Read what guests are saying on Google, or follow us on
+              Instagram to see recent visits — and if you've dined with us,
+              we'd love to hear from you.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Le+Petit+Chalet+KG+5+Kigali+Rwanda"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 bg-chalet-warm-white text-chalet-black font-medium tracking-wider rounded-full hover:bg-chalet-cream transition-colors uppercase text-sm">
+
+                Read Reviews on Google
+                <ArrowRightIcon className="ml-2 w-4 h-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/lepetitchalet_rwanda/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 border border-chalet-amber text-chalet-amber font-medium tracking-wider rounded-full hover:bg-chalet-amber hover:text-chalet-black transition-colors uppercase text-sm">
+
+                <InstagramIcon className="mr-2 w-4 h-4" />
+                Follow on Instagram
+              </a>
+            </div>
+          </motion.div>
         </section>
       </main>
     </PageTransition>);
